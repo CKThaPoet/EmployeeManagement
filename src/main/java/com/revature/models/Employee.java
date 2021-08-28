@@ -21,11 +21,11 @@ public class Employee implements Serializable{
 	private String name;
 	@Column
 	private String email;
-	@Column
+	@Column(name = "job_title")
 	private String jobtitle;
 	@Column
 	private String phone;
-	@Column
+	@Column(name = "image_url")
 	private String imageurl;
 
 }
