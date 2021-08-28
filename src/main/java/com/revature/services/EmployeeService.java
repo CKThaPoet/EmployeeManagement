@@ -14,7 +14,7 @@ public class EmployeeService {
 	//create an object of the Employee Repo class so I can have access to the JPA methods
 	private final EmployeeRepo employeeRepo;
 	
-	//to be used for crud oprations
+	//to be used for crud oprations... instead of injecting in xml we inject using annotations here to wire a bean as a dependency. 
 	@Autowired
 	public EmployeeService(EmployeeRepo employeeRepo) {
 		this.employeeRepo = employeeRepo;
@@ -28,7 +28,7 @@ public class EmployeeService {
 	}
 	
 	//make a method that returns the list of employees using a list<generic> and JPA methods
-	public List<Employee> findallEmployees(){
+	public List<Employee> findAllEmployees(){
 		return employeeRepo.findAll();
 	}
 	
@@ -47,7 +47,7 @@ public class EmployeeService {
 	
 	//method to delete a employee
 	//set retun type to void because we are not returning anything
-	public void deleteEmployeeById(Long id) {
+	public void deleteEmployee(Long id) {
 		//pass id as a parameter
 	employeeRepo.deleteEmployeeById(id);	
 	}
