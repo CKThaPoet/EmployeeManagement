@@ -11,7 +11,7 @@ PostgreSQL
 List of features ready :
 Can view all Employees.
 Can create a new Employee
-Eidt Employee information
+Edit Employee information
 
 To-do list:
 Add a login page
