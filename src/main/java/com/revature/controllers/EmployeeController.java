@@ -1,4 +1,4 @@
-package com.revature;
+package com.revature.controllers;
 
 import java.util.List;
 
@@ -44,7 +44,7 @@ public class EmployeeController {
 	
 	//get request from database to find employee by id
 	//this time use path variable with id to get the id
-		@GetMapping("/find{id}")
+		@GetMapping("/find/{id}")
 		//ResponseEntity to return an http response because its a generic we must specify what type of data in the<> 
 		//just employee this time that is all we are returing
 		//use path variable annotation

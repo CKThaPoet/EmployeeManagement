@@ -3,10 +3,14 @@ package com.revature.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.revature.exceptions.UserNotFoundException;
 import com.revature.models.Employee;
 import com.revature.repo.EmployeeRepo;
+
+//indicate this is a service
+@Service
 
 //thi is the service class we will use in the controller
 public class EmployeeService {
