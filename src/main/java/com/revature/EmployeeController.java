@@ -85,7 +85,7 @@ public class EmployeeController {
 				//use wildcard ? as the type in genereic<>
 				//what is in the get mapping {} must match what is in the path variable
 				public ResponseEntity<?> deleteEmployee(@PathVariable("id") Long id){
-					 
+					 //not returning anything
 					employeeService.deleteEmployee(id);
 					return new ResponseEntity<>(HttpStatus.OK);
 				}
