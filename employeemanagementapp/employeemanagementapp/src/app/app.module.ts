@@ -1,8 +1,10 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EmployeeService } from './employee.service';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //need http imported
+    HttpClientModule
   ],
-  providers: [],
+  //had to add the employeeservice because of teh root injectable in employee.service also import above 
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
