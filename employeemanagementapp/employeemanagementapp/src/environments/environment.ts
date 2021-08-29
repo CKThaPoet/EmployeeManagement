@@ -6,7 +6,7 @@ export const environment = {
   production: false,
 
   //simlar to environment variables in eclipse 
-  apiBaseUrl: 'http://localhost:8088'
+  apiBaseUrl:'http://localhost:8088'
 };
 
 /*
