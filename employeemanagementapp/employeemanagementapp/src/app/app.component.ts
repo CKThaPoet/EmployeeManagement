@@ -45,7 +45,11 @@ export class AppComponent implements OnInit{
   //subscribe to wait for a response
   public onAddEmployee(addForm: NgForm): void {
                                                             //RANDOM ERROR HERE I NEED TO FIX
-    document.getElementById('add-employee-form').click();
+    const add = document.getElementById('add-employee-form')?.click();
+    if (add){
+      
+    }
+                                                            //document.getElementById('add-employee-form').click();
     this.employeeService.addEmployee(addForm.value).subscribe(
 (response:Employee) => {
   console.log(response);
@@ -98,7 +102,7 @@ for (const employee of this.employees){
   if(employee.name.toLowerCase().indexOf(key.toLowerCase()) !== -1
   || employee.email.toLowerCase().indexOf(key.toLowerCase()) !== -1
   || employee.phone.toLowerCase().indexOf(key.toLowerCase()) !== -1
-  || employee.jobtitle.toLowerCase().indexOf(key.toLowerCase()) !== -1){
+  || employee.jobTitle.toLowerCase().indexOf(key.toLowerCase()) !== -1){
     results.push(employee);
   }
 }
